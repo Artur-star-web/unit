@@ -1,8 +1,8 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
 
@@ -14,7 +14,7 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        assertEquals("Ожидается, что метод вернёт 1000, если сумма равна 0",expected, actual);
     }
 
     @Test
@@ -25,7 +25,7 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        assertEquals("Ожидается, что метод вернёт 100, если сумма равна 900",expected, actual);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        assertEquals("Ожидается, что метод вернёт 0, если сумма равна 1000",expected, actual);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        assertEquals("Ожидается, что метод вернёт 500, если сумма равна 1500",expected, actual);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        assertEquals("Ожидается, что метод вернёт 50, если сумма равна 950",expected, actual);
     }
 
 
